@@ -13,6 +13,7 @@ body {
     #fdfdfd 40px
   );
   background-attachment: fixed;
+  background: url('shade.gpg') repeat;
   background-size: 100% 40px;
   animation: scrollShades 10s linear infinite;
 }

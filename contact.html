@@ -7,12 +7,18 @@
   <style>
     html, body {
       margin: 0;
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(#dcdcdc, #ffffff);
-      background-attachment: fixed;
-      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
       color: #222;
+      height: 100%;
       scroll-behavior: smooth;
+      background: repeating-linear-gradient(
+        to bottom,
+        #e0e0e0 0px,
+        #e0e0e0 20px,
+        #f8f8f8 20px,
+        #f8f8f8 40px
+      );
+      background-attachment: fixed;
     }
 
     header {
@@ -88,7 +94,7 @@
     }
 
     .contact-box {
-      background: #ffffffdd;
+      background: #ffffffcc;
       backdrop-filter: blur(4px);
       border-radius: 12px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
@@ -121,12 +127,11 @@
       gap: 20px;
     }
 
-    input, textarea {
+    input {
       padding: 15px;
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 16px;
-      resize: vertical;
     }
 
     button {
@@ -186,8 +191,7 @@
       <form action="#" method="post">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit">Send</button>
       </form>
     </div>
 

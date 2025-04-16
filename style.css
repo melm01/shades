@@ -1,11 +1,21 @@
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fdfdfd;
-  color: #333;
-}
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
 
+  /* Background stripe effect */
+  background: repeating-linear-gradient(
+    to bottom,
+    #e0e0e0 0px,
+    #e0e0e0 20px,
+    #fdfdfd 20px,
+    #fdfdfd 40px
+  );
+  background-attachment: fixed;
+  background-size: 100% 40px;
+  animation: scrollShades 10s linear infinite;
+}
 header {
   background-color: #222;
   color: #fff;
@@ -28,4 +38,12 @@ footer {
   text-align: center;
   padding: 15px;
   font-size: 14px;
+}
+@keyframes scrollShades {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 40px;
+  }
 }

@@ -1,44 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shade Vera</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shadvana | Modern Window Shades</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* Navigation Bar */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #222;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background-color: #222;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links li a:hover {
+      color: #000;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Shadevera Window Shades</h1>
-    <p>Stylish. Affordable. Custom-fit.</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>Our Products</h2>
-      <ul>
-        <li>Roller Shades</li>
-        <li>Blackout Shades</li>
-        <li>Smart Shades</li>
-        <li>Custom Designs</li>
-      </ul>
-    </section>
+  <header>
+    <div class="navbar">
+      <div class="logo">Shadvana</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <section>
-      <h2>Why Choose Us?</h2>
-      <p>We offer top-quality window coverings with professional installation and outstanding customer service.</p>
-    </section>
+  <!-- Page content goes here -->
 
-    <section>
-      <h2>Contact Us</h2>
-      <p>Call us: <strong>(818) 322-8133</strong></p>
-      <p>Email: <a href="mailto:aromirz@yahoo.com">aromirz@yahoo.com</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Shade Vera</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

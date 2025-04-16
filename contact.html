@@ -5,15 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us | Shadvana</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       font-family: 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(to right, #f1f1f1, #ffffff);
+      background: linear-gradient(#dcdcdc, #ffffff);
+      background-attachment: fixed;
+      background-size: cover;
       color: #222;
+      scroll-behavior: smooth;
     }
 
     header {
-      background-color: #ffffff;
+      background-color: #ffffffcc;
+      backdrop-filter: blur(5px);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       position: sticky;
       top: 0;
@@ -48,8 +52,8 @@
       text-decoration: none;
       color: #333;
       font-size: 16px;
-      transition: color 0.3s ease;
       position: relative;
+      transition: color 0.3s ease;
     }
 
     .nav-links li a::after {
@@ -84,10 +88,8 @@
     }
 
     .contact-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #fff;
+      background: #ffffffdd;
+      backdrop-filter: blur(4px);
       border-radius: 12px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
       padding: 40px;
@@ -103,6 +105,43 @@
     .contact-box a {
       color: #0073e6;
       text-decoration: none;
+    }
+
+    .form-wrapper {
+      background: #ffffffcc;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 14px;
+      border: none;
+      background-color: #222;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #444;
     }
 
     iframe {
@@ -138,14 +177,23 @@
     <h2>Contact Us</h2>
 
     <div class="contact-box">
-      <p><strong>Email:</strong> <a href="mailto:aromirz@yahoo.com">aromirz@yahoo.com"</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (818) 322-8133</a></p>
-      <p><strong>Location:</strong> 13443 Ebell st, Panorama city CA 91402</p>
+      <p><strong>Email:</strong> <a href="mailto:info@shadvana.com">info@shadvana.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+      <p><strong>Address:</strong> 123 Shade Street, YourCity, ST 12345</p>
     </div>
 
-    <!-- Embedded Google Map -->
+    <div class="form-wrapper">
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Google Map Embed -->
     <iframe 
-      src="https://maps.app.goo.gl/Rvx52AtHXBev8fiHA" 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019007144435!2d-122.41941528468112!3d37.77492927975939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e2ca57c5777%3A0x4e2d36ad3fa7a9f5!2sSan%20Francisco!5e0!3m2!1sen!2sus!4v1612372845621!5m2!1sen!2sus" 
       allowfullscreen="" loading="lazy">
     </iframe>
 

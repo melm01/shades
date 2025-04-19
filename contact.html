@@ -1,207 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us | Shadvana</title>
-  <style>
-    html, body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #222;
-      height: 100%;
-      scroll-behavior: smooth;
-      background: repeating-linear-gradient(
-        to bottom,
-        #e0e0e0 0px,
-        #e0e0e0 20px,
-        #f8f8f8 20px,
-        #f8f8f8 40px
-      );
-      background-attachment: fixed;
-    }
-
-    header {
-      background-color: #ffffffcc;
-      backdrop-filter: blur(5px);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #222;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 40px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-links li a {
-      text-decoration: none;
-      color: #333;
-      font-size: 16px;
-      position: relative;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links li a::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      left: 0;
-      bottom: -4px;
-      background-color: #222;
-      transition: width 0.3s ease;
-    }
-
-    .nav-links li a:hover::after {
-      width: 100%;
-    }
-
-    .nav-links li a:hover {
-      color: #000;
-    }
-
-    .section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .section h2 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 40px;
-    }
-
-    .contact-box {
-      background: #ffffffcc;
-      backdrop-filter: blur(4px);
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-      padding: 40px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .contact-box p {
-      font-size: 18px;
-      margin: 10px 0;
-    }
-
-    .contact-box a {
-      color: #0073e6;
-      text-decoration: none;
-    }
-
-    .form-wrapper {
-      background: #ffffffcc;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-      margin-bottom: 40px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    input {
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    button {
-      padding: 14px;
-      border: none;
-      background-color: #222;
-      color: white;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #444;
-    }
-
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Shadvana</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    button {
+      background-color: #222;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #444;
+    }
+    .contact-info {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-
-  <header>
-    <div class="navbar">
-      <div class="logo">Shadvana</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <section class="section">
-    <h2>Contact Us</h2>
-
-    <div class="contact-box">
-      <p><strong>Email:</strong> <a href="mailto:info@shadvana.com">info@shadvana.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-      <p><strong>Address:</strong> 123 Shade Street, YourCity, ST 12345</p>
-    </div>
-
-    <div class="form-wrapper">
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <button type="submit">Send</button>
-      </form>
-    </div>
-
-    <!-- Google Map Embed -->
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019007144435!2d-122.41941528468112!3d37.77492927975939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e2ca57c5777%3A0x4e2d36ad3fa7a9f5!2sSan%20Francisco!5e0!3m2!1sen!2sus!4v1612372845621!5m2!1sen!2sus" 
-      allowfullscreen="" loading="lazy">
-    </iframe>
-
-  </section>
-
-</body>
-</html>
+  <header>
+    <h1>Contact Shadvana</h1>
+  </header>
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <form action="mailto:info@shadvana.com" method="POST" enctype="text/plain">
+      <div
